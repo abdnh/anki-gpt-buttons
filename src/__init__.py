@@ -103,7 +103,7 @@ def add_editor_buttons(buttons: list[str], editor: Editor) -> None:
     config = mw.addonManager.getConfig(__name__)
     for i, field_button in enumerate(config["field_buttons"]):
         tip = f"GPT Field Button {i+1}"
-        if field_button['description']:
+        if field_button["description"]:
             tip += f": {field_button['description']}"
         if field_button["editor_shortcut"]:
             tip += f' ({field_button["editor_shortcut"]})'

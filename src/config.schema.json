@@ -126,13 +126,17 @@
                 "type": "object"
             },
             "type": "object"
+        },
+        "use_chat_api": {
+            "type": "boolean"
         }
     },
     "required": [
         "field_buttons",
         "preset_buttons",
         "run_preset_prompt_immediately",
-        "service_options"
+        "service_options",
+        "use_chat_api"
     ],
     "type": "object"
 }

@@ -29,7 +29,7 @@ class OpenAI:
     def complete(self, prompt: str) -> str:
         def callback(prompt: str) -> str:
             completion = openai.Completion.create(prompt=prompt, **self._params)
-            return completion.choices[0].message.content
+            return completion.choices[0].text.strip()
 
         return self._complete(callback, prompt)
 
@@ -38,6 +38,6 @@ class OpenAI:
             completion = openai.ChatCompletion.create(
                 messages=[{"role": "user", "content": prompt}], **self._params
             )
-            return completion.choices[0].message.content
+            return completion.choices[0].message.content.strip()
 
         return self._complete(callback, prompt)
