@@ -1,0 +1,2 @@
+class GPTButtonsException(Exception):
+    pass

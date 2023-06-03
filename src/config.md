@@ -1,0 +1,17 @@
+-   `field_buttons`: This defines buttons that pull prompts from fields (labeled "GPT" in the editor). Description of the options:
+    -   `browser_shortcut`: A shortcut to trigger the browser action corresponding to the button under _Edit > GPT_.
+    -   `description`: A description of what the button does shown in the button's tooltip.
+    -   `editor_shortcut`: A shortcut to trigger the editor button.
+    -   `override_contents`: Whether the button completely replaces the contents of the configured result fields. If `false`, the result will be appended to the existing contents separated by a newline.
+    -   `prompt_fields`: A list of fields to pull the prompt from. The field contents will be sent to GPT as a single prompt where each part is separated by a newline.
+    -   `remove_pattern`: Defines a regex pattern for parts of the result text that should be removed.
+    -   `result_fields`: This is a list of field sets where the nth set defines the fields where the nth section of the result should go.
+    -   `result_separator`: This is a string of text used to parse the result into multiple sections and paste it accordingly to `result_fields`.
+-   `preset_buttons`: This defines buttons that have preset prompts defined here in the config (labeled "G1", "G2", ... in the editor). Only options differing from the ones in `field_buttons` will be described:
+    -   `prompt`: This defines the prompt text to use.
+    -   `prompt_field`: This defines a field where `prompt` should be pasted.
+-   `run_preset_prompt_immediately`: Whether to run preset prompts immediately after pasting them when clicking on the G(n) buttons.
+-   `service_options`: This defines the parameters of the LLM models supported. Currently only [OpenAI](https://platform.openai.com/docs/introduction/overview) models are supported and their options are specified under the `openai` object:
+    -   `api_key`: Your OpenAI API key.
+    -   `model`: The language model to use. See [this](https://platform.openai.com/docs/models/overview) for available options.
+    -   Any parameter supported by the OpenAI API can be added too. See [this](https://platform.openai.com/docs/api-reference/completions/create) for available parameters.

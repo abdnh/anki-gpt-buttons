@@ -1,0 +1,63 @@
+{
+    "field_buttons": [
+        {
+            "browser_shortcut": "",
+            "description": "Process prompts in configured fields",
+            "editor_shortcut": "Ctrl+G",
+            "override_contents": true,
+            "prompt_fields": [
+                "prompt1",
+                "prompt2"
+            ],
+            "remove_pattern": "",
+            "result_fields": [
+                [
+                    "output1"
+                ],
+                [
+                    "output2"
+                ]
+            ],
+            "result_separator": "#"
+        }
+    ],
+    "preset_buttons": [
+        {
+            "browser_shortcut": "",
+            "description": "Description of preset button G1",
+            "editor_shortcut": "Ctrl+Alt+1",
+            "prompt": "some prompt",
+            "prompt_field": "prompt1",
+            "remove_pattern": "",
+            "result_fields": [
+                [
+                    "output1",
+                    "output2"
+                ]
+            ],
+            "result_separator": "@"
+        },
+        {
+            "browser_shortcut": "",
+            "description": "Description of preset button G2",
+            "editor_shortcut": "Ctrl+Alt+2",
+            "prompt": "another prompt",
+            "prompt_field": "prompt2",
+            "remove_pattern": "",
+            "result_fields": [
+                [
+                    "oo1",
+                    "oo2"
+                ]
+            ],
+            "result_separator": "/"
+        }
+    ],
+    "run_preset_prompt_immediately": false,
+    "service_options": {
+        "openai": {
+            "api_key": "",
+            "model": "gpt-3.5-turbo"
+        }
+    }
+}

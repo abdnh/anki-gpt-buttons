@@ -1,0 +1,138 @@
+{
+    "properties": {
+        "field_buttons": {
+            "items": {
+                "properties": {
+                    "browser_shortcut": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "editor_shortcut": {
+                        "type": "string"
+                    },
+                    "override_contents": {
+                        "type": "boolean"
+                    },
+                    "prompt_fields": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
+                    },
+                    "remove_pattern": {
+                        "type": "string"
+                    },
+                    "result_fields": {
+                        "items": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "type": "array"
+                    },
+                    "result_separator": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "editor_shortcut",
+                    "browser_shortcut",
+                    "override_contents",
+                    "prompt_fields",
+                    "result_fields",
+                    "result_separator",
+                    "remove_pattern"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "preset_buttons": {
+            "items": {
+                "properties": {
+                    "browser_shortcut": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "editor_shortcut": {
+                        "type": "string"
+                    },
+                    "prompt": {
+                        "type": "string"
+                    },
+                    "prompt_field": {
+                        "type": "string"
+                    },
+                    "remove_pattern": {
+                        "type": "string"
+                    },
+                    "result_fields": {
+                        "items": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "type": "array"
+                    },
+                    "result_separator": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "description",
+                    "editor_shortcut",
+                    "browser_shortcut",
+                    "prompt",
+                    "prompt_field",
+                    "result_fields",
+                    "result_separator",
+                    "remove_pattern"
+                ],
+                "type": "object"
+            },
+            "type": "array"
+        },
+        "run_preset_prompt_immediately": {
+            "type": "boolean"
+        },
+        "service_options": {
+            "items": {
+                "properties": {
+                    "openai": {
+                        "properties": {
+                            "api_key": {
+                                "type": "string"
+                            },
+                            "model": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "api_key"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "openai"
+                ],
+                "type": "object"
+            },
+            "type": "object"
+        }
+    },
+    "required": [
+        "field_buttons",
+        "preset_buttons",
+        "run_preset_prompt_immediately",
+        "service_options"
+    ],
+    "type": "object"
+}
