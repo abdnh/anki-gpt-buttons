@@ -13,5 +13,5 @@
 -   `run_preset_prompt_immediately`: Whether to run preset prompts immediately after pasting them when clicking on the G(n) buttons.
 -   `service_options`: This defines the parameters of the LLM models supported. Currently only [OpenAI](https://platform.openai.com/docs/introduction/overview) models are supported and their options are specified under the `openai` object:
     -   `api_key`: Your OpenAI API key.
-    -   `model`: The language model to use. See [this](https://platform.openai.com/docs/models/overview) for available options.
+    -   `model`: The language model to use. See [this](https://platform.openai.com/docs/models/model-endpoint-compatibility) for available options. Note that the add-on currently uses the chat API, so only models compatible with the `chat/completions` endpoint in that page will work.
     -   Any parameter supported by the OpenAI API can be added too. See [this](https://platform.openai.com/docs/api-reference/completions/create) for available parameters.

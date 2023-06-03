@@ -82,7 +82,7 @@ class BulkCompleter:
             return False
         # Here we send the prompt to the API and get the result
         # TODO: test rate limits
-        result = self.completer.complete(prompt)
+        result = self.completer.chat_complete(prompt)
         if not result:
             return False
         # Remove all occurences of specified regex from result
