@@ -2,6 +2,18 @@
 
 This Anki add-on allows you to add customizable editor buttons and browser actions to fill in notes using [OpenAI](https://openai.com/)'s GPT models.
 
+![Editor buttons](images/1.png)
+
+You'll need an [OpenAI API key](https://openai.com/blog/openai-api) to be able to use the add-on.
+
+Buttons can either work on prompts pulled from configured fields (this type of buttons are called "Field buttons"),
+or on prompts defined directly in the config ("Preset buttons"). You can configure multiple fields to parse the output into and other options.
+All configured buttons are also accessible from the browser's _Edit > GPT_ menu for bulk operations on selected notes.
+
+Check the add-on [config](src/config.md) under _Tools > Add-ons > Config_ for detailed description of the options.
+
+_This add-on is currently in beta. Testing and feedback are appreciated._
+
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for a list of changes.
