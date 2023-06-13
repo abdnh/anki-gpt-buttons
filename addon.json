@@ -1,6 +1,6 @@
 {
     "name": "GPT Buttons",
     "package": "gpt_buttons",
-    "homepage": "https://github.com/abdnh/anki-addon-template",
+    "homepage": "https://github.com/abdnh/anki-gpt-buttons",
     "min_point_version": 46
 }
