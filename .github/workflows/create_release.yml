@@ -27,7 +27,9 @@ jobs:
               run: python -m pip install -r requirements_dev.txt
 
             - name: Create packages
-              run: make
+              run: |
+                  make vendor
+                  make
 
             - name: Extract changes
               shell: bash
