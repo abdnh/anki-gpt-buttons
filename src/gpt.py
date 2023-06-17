@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Callable
+from typing import Any, Callable
 
 import openai
 import openai.error
@@ -26,17 +26,23 @@ class OpenAI:
                 f"An OpenAI error has occurred. Make sure you set your API key and other OpenAI settings correctly in the config and that your OpenAI account is active.\n\nFull error message from the OpenAI module:\n{str(exc)}"
             ) from exc
 
-    def complete(self, prompt: str) -> str:
+    def complete(self, prompt: str, **options: Any) -> str:
+        params = self._params.copy()
+        params.update(options)
+
         def callback(prompt: str) -> str:
-            completion = openai.Completion.create(prompt=prompt, **self._params)
+            completion = openai.Completion.create(prompt=prompt, **params)
             return completion.choices[0].text.strip()
 
         return self._complete(callback, prompt)
 
-    def chat_complete(self, prompt: str) -> str:
+    def chat_complete(self, prompt: str, **options: Any) -> str:
+        params = self._params.copy()
+        params.update(options)
+
         def callback(prompt: str) -> str:
             completion = openai.ChatCompletion.create(
-                messages=[{"role": "user", "content": prompt}], **self._params
+                messages=[{"role": "user", "content": prompt}], **params
             )
             return completion.choices[0].message.content.strip()
 

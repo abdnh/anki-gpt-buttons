@@ -18,7 +18,10 @@
                     "output2"
                 ]
             ],
-            "result_separator": "#"
+            "result_separator": "#",
+            "service_options": {
+                "openai": {}
+            }
         }
     ],
     "preset_buttons": [
@@ -38,7 +41,10 @@
                     "output2"
                 ]
             ],
-            "result_separator": "@"
+            "result_separator": "@",
+            "service_options": {
+                "openai": {}
+            }
         },
         {
             "browser_shortcut": "",
@@ -56,7 +62,10 @@
                     "oo2"
                 ]
             ],
-            "result_separator": "/"
+            "result_separator": "/",
+            "service_options": {
+                "openai": {}
+            }
         }
     ],
     "run_preset_prompt_immediately": false,

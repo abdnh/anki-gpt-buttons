@@ -35,6 +35,9 @@
                     },
                     "result_separator": {
                         "type": "string"
+                    },
+                    "service_options": {
+                        "type": "object"
                     }
                 },
                 "required": [
@@ -86,6 +89,9 @@
                     },
                     "result_separator": {
                         "type": "string"
+                    },
+                    "service_options": {
+                        "type": "object"
                     }
                 },
                 "required": [

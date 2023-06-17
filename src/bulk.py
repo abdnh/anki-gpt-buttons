@@ -78,10 +78,11 @@ class BulkCompleter:
             return False
         # Here we send the prompt to the API and get the result
         # TODO: test rate limits
+        service_options = options.get("service_options", {}).get("openai", {})
         if self.config["use_chat_api"]:
-            result = self.completer.chat_complete(prompt)
+            result = self.completer.chat_complete(prompt, **service_options)
         else:
-            result = self.completer.complete(prompt)
+            result = self.completer.complete(prompt, **service_options)
         if not result:
             return False
         # Remove all occurences of specified regex from result
