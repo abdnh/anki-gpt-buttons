@@ -120,7 +120,7 @@ def add_editor_buttons(buttons: list[str], editor: Editor) -> None:
         checked = ""
         if field_button["override_contents"]:
             checked = "checked"
-        toggle = f"<input type='checkbox' id='gpt_override' style='height: 100%;' oninput='pycmd(`gpt_buttons:toggle_override:{i}:${{event.target.checked}}`)' {checked}><label for='gpt_override' title='GPT Field Button {i+1}: Override existing contents'><img src='{WEB_BASE}/icons/journal-x.svg'></label>"
+        toggle = f"<div><input type='checkbox' id='gpt_override' oninput='pycmd(`gpt_buttons:toggle_override:{i}:${{event.target.checked}}`)' {checked}><label for='gpt_override' title='GPT Field Button {i+1}: Override existing contents'><img src='{WEB_BASE}/icons/journal-x.svg'></label></div>"
         buttons.append(toggle)
 
     for i, preset_button in enumerate(config["preset_buttons"]):
@@ -153,7 +153,7 @@ def add_editor_buttons(buttons: list[str], editor: Editor) -> None:
     checked = ""
     if config["run_preset_prompt_immediately"]:
         checked = "checked"
-    toggle = f"<input type='checkbox' id='gpt_run_immediately' style='height: 100%;' oninput='pycmd(`gpt_buttons:toggle_run_immediately:${{event.target.checked}}`)' {checked}><label for='gpt_run_immediately' title='Run GPT presets immediately'><img src='{WEB_BASE}/icons/send.svg'></label>"
+    toggle = f"<div><input type='checkbox' id='gpt_run_immediately' oninput='pycmd(`gpt_buttons:toggle_run_immediately:${{event.target.checked}}`)' {checked}><label for='gpt_run_immediately' title='Run GPT presets immediately'><img src='{WEB_BASE}/icons/send.svg'></label></div>"
     buttons.append(toggle)
 
 
