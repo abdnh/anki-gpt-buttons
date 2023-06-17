@@ -60,24 +60,20 @@ class BulkCompleter:
                 if field in note:
                     matched.append(field)
             result_field_lists.append(matched)
-        # We either get the prompt from configured fields or from a static config option according to the type of the button
-        if "prompt_fields" in options:
-            prompt = "\n".join(
-                note[field]
-                for field in options["prompt_fields"]
-                if field in note and note[field].strip()
-            )
-        else:
-            # If `fill_prompt` is True, we only paste the prompt to the configured prompt field and return
-            if fill_prompt:
-                prompt = options["prompt"]
-                if options["prompt_field"] in note:
-                    note[options["prompt_field"]] = prompt
+
+        # If `fill_prompt` is True, we only paste the prompt to the configured prompt field and return
+        if fill_prompt:
+            for field in options["prompt_fields"]:
+                if field in note:
+                    note[field] = options["prompt"]
                     return True
-                return False
-            if options["prompt_field"] not in note:
-                return False
-            prompt = note[options["prompt_field"]]
+            return False
+        prompt = "\n".join(
+            note[field]
+            for field in options["prompt_fields"]
+            if field in note and note[field].strip()
+        )
+
         if not any(l for l in result_field_lists):
             return False
         # Here we send the prompt to the API and get the result

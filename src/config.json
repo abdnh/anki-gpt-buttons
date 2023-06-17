@@ -27,7 +27,10 @@
             "description": "Description of preset button G1",
             "editor_shortcut": "Ctrl+Alt+1",
             "prompt": "some prompt",
-            "prompt_field": "prompt1",
+            "prompt_fields": [
+                "prompt1",
+                "prompt2"
+            ],
             "remove_pattern": "",
             "result_fields": [
                 [
@@ -42,7 +45,10 @@
             "description": "Description of preset button G2",
             "editor_shortcut": "Ctrl+Alt+2",
             "prompt": "another prompt",
-            "prompt_field": "prompt2",
+            "prompt_fields": [
+                "prompt1",
+                "prompt2"
+            ],
             "remove_pattern": "",
             "result_fields": [
                 [

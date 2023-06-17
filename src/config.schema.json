@@ -66,8 +66,11 @@
                     "prompt": {
                         "type": "string"
                     },
-                    "prompt_field": {
-                        "type": "string"
+                    "prompt_fields": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "type": "array"
                     },
                     "remove_pattern": {
                         "type": "string"
@@ -90,7 +93,6 @@
                     "editor_shortcut",
                     "browser_shortcut",
                     "prompt",
-                    "prompt_field",
                     "result_fields",
                     "result_separator",
                     "remove_pattern"
